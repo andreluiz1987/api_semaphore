@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const mqtt = require('mqtt');
 
-const mqtt_url = process.env.CLOUDMQTT_URL || 'mqtt://meclipav:g2ydzGLEva3M@tailor.cloudmqtt.com:15860';
-const topic = process.env.CLOUDMQTT_TOPIC || 'esp/test';
+const mqtt_url = process.env.CLOUDMQTT_URL || '';
+const topic = process.env.CLOUDMQTT_TOPIC || '';
 const client = mqtt.connect(mqtt_url);
 
 client.on('connect', function() {
